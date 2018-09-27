@@ -39,6 +39,7 @@ def update_twitter():
         command = mentions["statuses"][0]["text"]
         words = command.split("Analyze:")
         target_account = words[1].strip()
+        print(f"analysis for target_account: {target_account}")
         user_tweets = api.user_timeline(target_account, page=1)
 
         # Loop through tweets
